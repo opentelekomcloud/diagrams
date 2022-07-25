@@ -13,17 +13,17 @@ DIR_TEMPLATE = "templates"
 
 PROVIDERS = (
     "base", "onprem", "aws", "azure", "digitalocean", "gcp", "ibm", "firebase", "k8s", "alibabacloud", "oci",
-    "programming", "saas", "elastic", "generic", "openstack", "outscale")
+    "programming", "saas", "elastic", "generic", "openstack", "outscale", "opentelekomcloud")
 
 #########################
 #  Resource Processing  #
 #########################
 
-CMD_ROUND = "round"
+CMD_ROUND = "/root/go/bin/round"
 CMD_ROUND_OPTS = ("-w",)
-CMD_SVG2PNG = "inkscape"
+CMD_SVG2PNG = "/usr/bin/inkscape"
 CMD_SVG2PNG_OPTS = ("-w", "256", "-h", "256", "--export-type", "png")
-CMD_SVG2PNG_IM = "convert"
+CMD_SVG2PNG_IM = "/usr/bin/convert"
 CMD_SVG2PNG_IM_OPTS = ("-shave", "25%x25%", "-resize", "256x256!")
 
 FILE_PREFIXES = {
@@ -43,6 +43,7 @@ FILE_PREFIXES = {
     "outscale": (),
     "generic": (),
     "openstack": (),
+    "opentelekomcloud": (),
 }
 
 #########################
@@ -449,4 +450,6 @@ ALIASES = {
             "Tripleo": "TripleO",
         }
     },
+    "opentelekomcloud": {},
+
 }

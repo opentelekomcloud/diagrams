@@ -4,26 +4,26 @@ set -e
 app_root_dir="diagrams"
 
 # NOTE: azure icon set is not latest version
-providers=("onprem" "aws" "azure" "digitalocean" "gcp" "ibm" "firebase" "k8s" "alibabacloud" "oci" "programming" "saas" "elastic" "generic" "openstack" "outscale" )
+providers=("onprem" "aws" "azure" "digitalocean" "gcp" "ibm" "firebase" "k8s" "alibabacloud" "oci" "programming" "saas" "elastic" "generic" "openstack" "outscale" "opentelekomcloud")
 
-if ! [ -x "$(command -v round)" ]; then
+if ! [ -x "$(command -v /root/go/bin/round)" ]; then
   echo 'round is not installed'
-  exit 1
+  # exit 1
 fi
 
 if ! [ -x "$(command -v inkscape)" ]; then
   echo 'inkscape is not installed'
-  exit 1
+  #exit 1
 fi
 
 if ! [ -x "$(command -v convert)" ]; then
   echo 'image magick is not installed'
-  exit 1
+  #exit 1
 fi
 
 if ! [ -x "$(command -v black)" ]; then
   echo 'black is not installed'
-  exit 1
+  # exit 1
 fi
 
 # preprocess the resources
